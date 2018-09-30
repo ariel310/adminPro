@@ -13,6 +13,8 @@ import { ChartsModule } from 'ng2-charts';
 // temporal
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from '../components/grafico/grafico-dona/grafico-dona.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { ServiceModule } from '../services/service.module';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { GraficoDonaComponent } from '../components/grafico/grafico-dona/grafico
             Graficas1Component,
             TableComponent,
         IncrementadorComponent,
-        GraficoDonaComponent],
+        GraficoDonaComponent,
+        AccountSettingsComponent],
         exports: [
             DashboardComponent,
             ProgressComponent,
@@ -35,7 +38,8 @@ import { GraficoDonaComponent } from '../components/grafico/grafico-dona/grafico
             PAGES_ROUTES,
             FormsModule,
             ChartsModule,
-            BrowserModule
+            BrowserModule,
+            ServiceModule
         ]
 })
 
