@@ -1,0 +1,22 @@
+{
+    "Direcciones": [{
+            "Direccion": "Viamonte 2868",
+            "Ciudad": "Rosario",
+            "Provincia": "Santa Fe",
+            "Pais": "Argentina"
+        },
+        {
+            "Direccion": "Viamonte 4024",
+            "Ciudad": "Rosario",
+            "Provincia": "Santa Fe",
+            "Pais": "Argentina"
+        },
+        {
+            "Direccion": "Buenos Aires 2353",
+            "Ciudad": "Rosario",
+            "Provincia": "Santa Fe",
+            "Pais": "Argentina"
+        }
+
+    ]
+}

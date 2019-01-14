@@ -15,7 +15,10 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 import { GraficoDonaComponent } from '../components/grafico/grafico-dona/grafico-dona.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ServiceModule } from '../services/service.module';
-
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
+import { MapsComponent } from './maps/maps.component';
 
 @NgModule({
         declarations: [
@@ -26,7 +29,10 @@ import { ServiceModule } from '../services/service.module';
             TableComponent,
         IncrementadorComponent,
         GraficoDonaComponent,
-        AccountSettingsComponent],
+        AccountSettingsComponent,
+        PromesasComponent,
+        RxjsComponent,
+        MapsComponent],
         exports: [
             DashboardComponent,
             ProgressComponent,
@@ -39,7 +45,13 @@ import { ServiceModule } from '../services/service.module';
             FormsModule,
             ChartsModule,
             BrowserModule,
-            ServiceModule
+            ServiceModule,
+            AgmCoreModule.forRoot({
+                apiKey: 'AIzaSyCKJoCO8phfyxw42K5H7MFRdgmctnYxA70'
+            })
+        ],
+        providers: [
+            GoogleMapsAPIWrapper
         ]
 })
 

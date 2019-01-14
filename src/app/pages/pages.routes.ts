@@ -5,18 +5,25 @@ import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { TableComponent } from './table/table.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { LoginGuardGuard } from '../services/service.index';
+
 
 
 const pagesRoutes: Routes = [
     {
         path: '',
         component: PagesComponent,
+        canActivate: [ LoginGuardGuard ],
         children: [
-            { path: 'dashboard', component: DashboardComponent },
-            { path: 'progress', component: ProgressComponent },
-            { path: 'graficas1', component: Graficas1Component },
-            { path: 'tabla', component: TableComponent },
-            { path: 'account-settings', component: AccountSettingsComponent },
+            { path: 'dashboard', component: DashboardComponent, data: { titulo: 'Dashboard' } },
+            { path: 'progress', component: ProgressComponent, data: { titulo: 'Progress' } },
+            { path: 'graficas1', component: Graficas1Component, data: { titulo: 'Graficas' } },
+            { path: 'tabla', component: TableComponent, data: { titulo: 'Tabla' } },
+            { path: 'promesas', component: PromesasComponent, data: { titulo: 'Promesas' } },
+            { path: 'account-settings', component: AccountSettingsComponent, data: { titulo: 'Settings' } },
+            { path: 'rxjs', component: RxjsComponent, data: { titulo: 'RxJs' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }
