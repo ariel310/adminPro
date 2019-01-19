@@ -10,15 +10,15 @@ import { SharedModule } from '../shared/shared.module';
 import { TableComponent } from './table/table.component';
 import { ChartsModule } from 'ng2-charts';
 
-// temporal
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from '../components/grafico/grafico-dona/grafico-dona.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ServiceModule } from '../services/service.module';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
-import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
-import { MapsComponent } from './maps/maps.component';
+import { PipesModule } from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
         declarations: [
@@ -32,7 +32,7 @@ import { MapsComponent } from './maps/maps.component';
         AccountSettingsComponent,
         PromesasComponent,
         RxjsComponent,
-        MapsComponent],
+        ProfileComponent],
         exports: [
             DashboardComponent,
             ProgressComponent,
@@ -40,18 +40,14 @@ import { MapsComponent } from './maps/maps.component';
             Graficas1Component
         ],
         imports: [
+            CommonModule,
             SharedModule,
             PAGES_ROUTES,
             FormsModule,
             ChartsModule,
             BrowserModule,
             ServiceModule,
-            AgmCoreModule.forRoot({
-                apiKey: 'AIzaSyCKJoCO8phfyxw42K5H7MFRdgmctnYxA70'
-            })
-        ],
-        providers: [
-            GoogleMapsAPIWrapper
+            PipesModule
         ]
 })
 
