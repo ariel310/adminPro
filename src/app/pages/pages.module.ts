@@ -21,22 +21,27 @@ import { ProfileComponent } from './profile/profile.component';
 import { CommonModule } from '@angular/common';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
-
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 @NgModule({
-        declarations: [
-            ModalUploadComponent,
-            DashboardComponent,
-            ProgressComponent,
-            PagesComponent,
-            Graficas1Component,
-            TableComponent,
+    declarations: [
+        ModalUploadComponent,
+        DashboardComponent,
+        ProgressComponent,
+        PagesComponent,
+        Graficas1Component,
+        TableComponent,
         IncrementadorComponent,
         GraficoDonaComponent,
         AccountSettingsComponent,
         PromesasComponent,
         RxjsComponent,
         ProfileComponent,
-        UsuariosComponent],
+        UsuariosComponent,
+        HospitalesComponent,
+        MedicosComponent,
+        MedicoComponent],
         exports: [
             DashboardComponent,
             ProgressComponent,

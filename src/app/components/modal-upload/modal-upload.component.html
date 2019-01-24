@@ -10,7 +10,7 @@
             </button>
                 </div>
                 <div class="modal-body" align=center>
-                    <img *ngIf="!imagenTemp" [src]="_modalUpload.img | imagen" class="w150">
+                    <img *ngIf="!imagenTemp" [src]="_modalUpload.img | imagen: _modalUpload.tipo" class="w150">
                     <img *ngIf="imagenTemp" [src]="imagenTemp" class="w150">
 
                     <br><br>

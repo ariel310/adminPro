@@ -23,6 +23,7 @@ export class ModalUploadService {
   }
 
   mostrarModal( tipo: string, id: string, imagen: any ) {
+    console.log(tipo, id, imagen);
     this.oculto = '';
     this.id = id;
     this.tipo = tipo;

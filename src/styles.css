@@ -33,3 +33,26 @@
     height: 100%;
     z-index: 9999;
 }
+
+.izquierda {
+    float: left;
+}
+
+.derecha {
+    float: right;
+}
+
+.margin-left-10 {
+    margin-left: 10px !important;
+}
+
+.margin-right-10 {
+    margin-right: 10px !important;
+}
+
+.swal-footer {
+    background-color: rgb(245, 248, 250);
+    margin-top: 32px;
+    border-top: 1px solid #E9EEF1;
+    overflow: hidden;
+}
