@@ -13,12 +13,33 @@ export class ModalUploadComponent implements OnInit {
 
   imagenTemp: any;
 
+  titulo: string;
+
   constructor(
     public _subirArchivo: SubirArchivoService,
     public _modalUpload: ModalUploadService
-  ) { }
+  ) { this.setearTitulo(); }
 
   ngOnInit() {
+  }
+
+  setearTitulo() {
+
+    switch ( this._modalUpload.tipo ) {
+
+      case 'usuarios':
+        this.titulo = 'Cambiar imágen del usuario';
+        break;
+
+      case 'medicos':
+        this.titulo = 'Cambiar imágen del hospital';
+        break;
+
+      case 'hospitales':
+        this.titulo = 'Cambiar imágen del médico';
+        break;
+
+    }
   }
 
   seleccionImagen( archivo: File ) {

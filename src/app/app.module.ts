@@ -12,12 +12,14 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 
 import { ServiceModule } from './services/service.module';
+import { TestComponent } from './test/test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent ],
+    RegisterComponent,
+    TestComponent],
   imports: [
     BrowserModule,
     APP_ROUTES,
