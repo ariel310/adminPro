@@ -22,9 +22,11 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "@google/maps": "^0.5.5",
+    "angular-bootstrap-md": "^7.3.0",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
     "ng2-charts": "^1.6.0",
+    "npm-install-peers": "^1.2.1",
     "rxjs": "^6.0.0",
     "sweetalert": "^2.1.2",
     "zone.js": "~0.8.26"

@@ -12,5 +12,5 @@ export class AppComponent {
 
   }
 
-  title = 'adminpro';
+  title = 'OAPSA';
 }

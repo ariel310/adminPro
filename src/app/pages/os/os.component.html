@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-body">
 
-                <input #input (keyup)="escriboBusqueda( input.value )" class="text" class="form-control" placeholder="Buscar Hospital">
+                <input #input (keyup)="escriboBusqueda( input.value )" class="text" class="form-control" placeholder="Buscar obra social">
 
             </div>
         </div>
@@ -32,13 +32,13 @@
 
                 <div class="izquierda">
                     <h3 class="card-title">
-                        Hospitales Registrados ( <small>{{ total }}</small> )
+                        Obras Sociales Registradas ( <small>{{ total }}</small> )
                     </h3>
                 </div>
                 <div class="derecha">
-                    <button (click)="nuevoHospital()" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                    <button (click)="nuevaOS()" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
                         <i class="fa fa-plus"></i>
-                        Crear Hospital
+                        Nueva Obra Social
                     </button>
 
                 </div>
@@ -46,25 +46,21 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Foto</th>
-                            <th>Hospital</th>
+                            <th>Obra Social</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let hospital of hospitales">
-                            <td class="w70">
-                                <img (click)="abrirModal( hospital._id, hospital.img )" [src]="hospital.img | imagen: 'hospitales'" class="img-50 img-circle pointer">
+                        <tr *ngFor="let os of oss">
+                            <td>
+                                {{ os.nombre }}
                             </td>
                             <td>
-                                <input [(ngModel)]="hospital.nombre" type="text" class="form-control" placeholder="{{ hospital.nombre }}">
-                            </td>
-                            <td>
-                                <button (click)="guardarHospital( hospital )" class="btn btn-primary margin-right-10">
-                                  <i class="fa fa-save"></i>
-                                </button>
-                                <button (click)="borrarHospital( hospital )" class="btn btn-danger">
-                                  <i class="fa fa-trash-o"></i>
+                                <a mdbBtn (click)="guardarOS( os )" floating="true" gradient="purple" mdbWavesEffect>
+                                    <mdb-icon fas icon="save"></mdb-icon>
+                                </a>
+                                <button (click)="borrarOS( os )" class="btn-danger">
+                                  <i class="fas fa-trash-o"></i>
                                 </button>
                             </td>
                         </tr>

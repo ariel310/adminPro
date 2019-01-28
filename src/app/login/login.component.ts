@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { UsuarioService } from '../services/usuario/usuario.service';
 import { Usuario } from '../models/usuario.model';
+import { LoginModalService } from '../components/login-modal/login-modal.service';
+import { RegisterModalService } from '../components/register-modal/register-modal.service';
 
 declare function init_plugins();
 declare const gapi: any;
@@ -10,7 +12,7 @@ declare const gapi: any;
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./app.component.scss', './login.component.css']
 })
 export class LoginComponent implements OnInit {
 
@@ -20,7 +22,9 @@ export class LoginComponent implements OnInit {
   auth2: any;
 
   constructor( public router: Router,
-        public _usuarioService: UsuarioService ) { }
+        public _usuarioService: UsuarioService,
+        public _modalLogin: LoginModalService,
+        public _modalRegister: RegisterModalService ) { }
 
   ngOnInit() {
     init_plugins();
@@ -79,5 +83,15 @@ export class LoginComponent implements OnInit {
           .subscribe( correcto => this.router.navigate(['/dashboard']) );
     console.log( forma.valid );
     console.log( forma.value );
+  }
+
+  abrirModalLogin( ) {
+    console.log('Abrir login');
+    this._modalLogin.mostrarModal();
+  }
+
+  abrirModalRegister( ) {
+    console.log('Abrir register');
+    this._modalRegister.mostrarModal();
   }
 }

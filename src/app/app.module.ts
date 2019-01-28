@@ -10,24 +10,32 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ServiceModule } from './services/service.module';
-import { TestComponent } from './test/test/test.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterModalComponent } from './components/register-modal/register-modal.component';
+import { LoginModalComponent } from './components/login-modal/login-modal.component';
+import { ModalTurnosComponent } from './components/modal-turnos/modal-turnos.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    TestComponent],
+    RegisterModalComponent,
+    LoginModalComponent,
+    ModalTurnosComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     APP_ROUTES,
     PagesModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    ServiceModule
+    ServiceModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,9 +21,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { CommonModule } from '@angular/common';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
-import { HospitalesComponent } from './hospitales/hospitales.component';
+import { OsComponent } from './os/os.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { MedicoComponent } from './medicos/medico.component';
+import { PacienteNuevoComponent } from './paciente-nuevo/paciente-nuevo.component';
+import { PacientesComponent } from './pacientes/pacientes.component';
+import { TurnosComponent } from './turnos/turnos.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 @NgModule({
     declarations: [
         ModalUploadComponent,
@@ -39,9 +43,12 @@ import { MedicoComponent } from './medicos/medico.component';
         RxjsComponent,
         ProfileComponent,
         UsuariosComponent,
-        HospitalesComponent,
+        OsComponent,
         MedicosComponent,
-        MedicoComponent],
+        MedicoComponent,
+        PacienteNuevoComponent,
+        PacientesComponent,
+        TurnosComponent],
         exports: [
             DashboardComponent,
             ProgressComponent,
@@ -56,7 +63,8 @@ import { MedicoComponent } from './medicos/medico.component';
             ChartsModule,
             BrowserModule,
             ServiceModule,
-            PipesModule
+            PipesModule,
+            MDBBootstrapModule.forRoot()
         ]
 })
 
